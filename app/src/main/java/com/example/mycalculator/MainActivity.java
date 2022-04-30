@@ -213,26 +213,26 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                if(addition)
                {
-                   text.setText(Float.parseFloat(text.getText()+"")+a+"");
+                   text.setText(a+ Float.parseFloat(text.getText()+"")+"");
                }
                else if(subtraction)
                 {
-                    text.setText(Float.parseFloat(text.getText()+"")-a+"");
+                    text.setText(a-Float.parseFloat(text.getText()+"")+"");
                 }
 
                else if(multiplication)
                {
-                   text.setText(Float.parseFloat(text.getText()+"")*a+"");
+                   text.setText(a*Float.parseFloat(text.getText()+"")+"");
                }
 
                else if(divison)
                {
-                   text.setText(Float.parseFloat(text.getText()+"")/a+"");
+                   text.setText(a/Float.parseFloat(text.getText()+"")+"");
                }
 
                else if(mod)
                {
-                   text.setText(Float.parseFloat(text.getText()+"")%a+"");
+                   text.setText(a%Float.parseFloat(text.getText()+"")+"");
                }
             }
         });

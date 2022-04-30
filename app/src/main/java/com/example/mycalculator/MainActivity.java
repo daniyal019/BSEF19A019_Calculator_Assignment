@@ -107,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
         btn10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text.setText(text.getText()+"+");
                 if(text==null)
                 {
                     text.setText("");
@@ -117,6 +116,7 @@ public class MainActivity extends AppCompatActivity {
                     val1();
                     multiplication=divison=subtraction=mod=false;
                     addition=true;
+                    text.setText(null);
                 }
 
             }
@@ -131,7 +131,6 @@ public class MainActivity extends AppCompatActivity {
         btn17.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text.setText(text.getText()+"%");
 
                 if(text==null)
                 {
@@ -142,19 +141,20 @@ public class MainActivity extends AppCompatActivity {
                     val1();
                     multiplication=divison=subtraction=addition=false;
                     mod=true;
+                    text.setText(null);
                 }
             }
         });
         btn11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text.setText(text.getText() + "-");
                 if (text == null) {
                     text.setText("");
                 } else {
                     val1();
                     multiplication = divison = addition=mod = false;
                     subtraction = true;
+                    text.setText(null);
                 }
             }
         });
@@ -162,27 +162,26 @@ public class MainActivity extends AppCompatActivity {
         btn12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text.setText(text.getText() + "*");
                 if (text == null) {
                     text.setText("");
                 } else {
                     val1();
                     addition = divison = mod=subtraction = false;
                     multiplication = true;
+                    text.setText(null);
                 }
             }
         });
         btn0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text.setText(text.getText()+"*");
+                text.setText(text.getText()+"0");
             }
         });
 
         btn13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                text.setText(text.getText()+"/");
                 if(text==null)
                 {
                     text.setText("");
@@ -192,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
                     val1();
                     multiplication=  addition=mod=subtraction=false;
                     divison  =true;
+                    text.setText(null);
                 }
             }
         });
@@ -201,7 +201,19 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        btn15.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+               if(addition)
+               {
+                   text.setText(Float.parseFloat(text.getText()+"")+a+"");
+               }
+               else if(subtraction)
+                {
+                    text.setText(Float.parseFloat(text.getText()+"")+a+"");
+                }
+            }
+        });
 
 
 

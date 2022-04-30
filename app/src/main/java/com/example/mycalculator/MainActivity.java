@@ -220,6 +220,7 @@ public class MainActivity extends AppCompatActivity {
                     text.setText(a-Float.parseFloat(text.getText()+"")+"");
                 }
 
+
                else if(multiplication)
                {
                    text.setText(a*Float.parseFloat(text.getText()+"")+"");

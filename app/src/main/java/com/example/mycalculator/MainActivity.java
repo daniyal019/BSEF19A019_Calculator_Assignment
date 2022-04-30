@@ -207,8 +207,7 @@ public class MainActivity extends AppCompatActivity {
                 addition=divison= multiplication=subtraction=mod=false;
             }
         });
-boolean j;
-Float f;
+
         btn15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

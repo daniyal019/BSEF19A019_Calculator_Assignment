@@ -199,7 +199,14 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        btn14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                a=null;
+                text.setText(null);
+                addition=divison= multiplication=subtraction=mod=false;
+            }
+        });
 
         btn15.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -210,8 +217,23 @@ public class MainActivity extends AppCompatActivity {
                }
                else if(subtraction)
                 {
-                    text.setText(Float.parseFloat(text.getText()+"")+a+"");
+                    text.setText(Float.parseFloat(text.getText()+"")-a+"");
                 }
+
+               else if(multiplication)
+               {
+                   text.setText(Float.parseFloat(text.getText()+"")*a+"");
+               }
+
+               else if(divison)
+               {
+                   text.setText(Float.parseFloat(text.getText()+"")/a+"");
+               }
+
+               else if(mod)
+               {
+                   text.setText(Float.parseFloat(text.getText()+"")%a+"");
+               }
             }
         });
 

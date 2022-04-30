@@ -208,6 +208,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 boolean j;
+Float f;
         btn15.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
